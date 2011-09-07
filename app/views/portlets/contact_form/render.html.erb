@@ -1,0 +1,21 @@
+<% form_for @contact, :url => cms_path(@portlet, "submit") do |f| %>
+  <%= f.error_messages %>
+
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.label :phone_number %>
+  <%= f.text_field :phone_number %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :message %>
+  <%= f.text_area :message%>
+  <%= f.check_box :mailing_list %>
+  <%= f.label :mailing_list, "Yes, I'd like to be added to the Turo Mailing List" %>
+  <button type="submit">
+    Send Message
+  </button>
+<% end %>
